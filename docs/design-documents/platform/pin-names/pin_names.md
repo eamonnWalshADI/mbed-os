@@ -30,7 +30,7 @@
 
 ### Overview and background
 
-Mbed is designed so that application code written in the platform is portable across different Mbed supported boards with the same hardwre capabilities or interfaces. However, the code, in most cases, is not truly portable due to the differences in pin name definitions for the same kind of interfaces across different boards. This document provides a standard for defining pin names for the commonly used Mbed interfaces in a board support package. 
+Mbed is designed so that application code written in the platform is portable across different Mbed supported boards with the same hardware capabilities or interfaces. However, the code, in most cases, is not truly portable due to the differences in pin name definitions for the same kind of interfaces across different boards. This document provides a standard for defining pin names for the commonly used Mbed interfaces in a board support package. 
 
 ### Requirements and assumptions
 
@@ -44,7 +44,7 @@ To achieve meaningful portability of application code across various Mbed enable
 
 All Arduino Uno (Rev3) form factor Mbed controller boards should define D0-D15 & A0-A5 pins as a default standard.
 
-    // Arduino Uno(Rev3) Header pin connection naming  
+    // Arduino Uno(Rev3) header pin connection naming  
     // Px_xx relates to the processor pin connected to the Arduino Uno (Rev3) header pin
     
     D0 = Px_xx,  // UART RX / GPIO 0  
@@ -75,7 +75,7 @@ All Arduino Uno (Rev3) form factor Mbed controller boards should define D0-D15 &
 
 All I2C definitions for the Arduino Uno (Rev3) header pins should be defined as follows:
 
-    // Arduino Uno(Rev3) Header pin connection naming   
+    // Arduino Uno(Rev3) header pin connection naming   
     // Px_xx relates to the processor pin connected to the Arduino Uno (Rev3) header pin
     
     D14 = Px_xx, // I2C SDA / GPIO 14  
@@ -154,21 +154,10 @@ All SPI definitions for a new connector should be defined as follows:
 
 All LED definitions should be defined as follows:
 
-    // Px_xx relates to the processor pin connected to the LED
-    
     LED1 = Px_xx,  // LED1  
     LED2 = Px_xx,  // LED2  
     LED3 = Px_xx,  // LED3  
     LED4 = Px_xx,  // LED4  
-
-If further LEDs are needed the following should be used:
-
-    LED1 = Px_xx,  // LED1  
-    LED2 = Px_xx,  // LED2  
-    LED3 = Px_xx,  // LED3  
-    LED4 = Px_xx,  // LED4  
-    LED5 = Px_xx,  // LED5  
-    LED6 = Px_xx,  // LED6  
     .  
     .  
     LEDN = Px_xx   // LEDN
@@ -177,20 +166,10 @@ If further LEDs are needed the following should be used:
 
 All BUTTON definitions should be defined as follows:
 
-    // Px_xx relates to the processor pin connected to the Button  
     BUTTON1 = Px_xx,  // BUTTON1  
     BUTTON2 = Px_xx,  // BUTTON2  
     BUTTON3 = Px_xx,  // BUTTON3  
     BUTTON4 = Px_xx,  // BUTTON4  
-
-If further BUTTONs are needed the following should be used:
-
-    BUTTON1 = Px_xx,  // BUTTON1  
-    BUTTON2 = Px_xx,  // BUTTON2  
-    BUTTON3 = Px_xx,  // BUTTON3  
-    BUTTON4 = Px_xx,  // BUTTON4  
-    BUTTON5 = Px_xx,  // BUTTON5  
-    BUTTON6 = Px_xx,  // BUTTON6  
     .  
     .  
     BUTTONN = Px_xx   // BUTTONN  
